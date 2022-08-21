@@ -1,0 +1,3 @@
+[submodule "unicenta-pos"]
+	path = unicenta-pos
+	url = https://github.com/poolborges/unicenta-pos.git
