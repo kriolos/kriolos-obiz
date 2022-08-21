@@ -26,3 +26,17 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: kriolos-obiz-app
+        path: "application/target/kriolos-obiz-app-0.0.1-SNAPSHOT.zip"
+    - name: Release Binary
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: true
+        title: "Development Build"
+        files: |
+          application/target/kriolos-obiz-app-0.0.1-SNAPSHOT.zip
