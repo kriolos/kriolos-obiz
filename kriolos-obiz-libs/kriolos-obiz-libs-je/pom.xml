@@ -6,6 +6,7 @@
         <groupId>io.github.kriolos.obiz</groupId>
         <artifactId>kriolos-obiz-libs</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../</relativePath>
     </parent>
 
     <artifactId>kriolos-obiz-libs-je</artifactId>
