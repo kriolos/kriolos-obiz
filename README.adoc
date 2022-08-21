@@ -38,6 +38,17 @@ image:https://badges.crowdin.net/kriolos-obiz/localized.svg["Crowdin/Translation
 endif::[]
 
 
+== Build 
+
+.Clone and update submodule
+[bash]
+----
+$ git clone https://github.com/kriolos/kriolos-obiz
+$ git submodule update --init --recursive
+
+$ git submodule update --remote
+----
+
 == License 
 
 IMPORTANT: This software is GLPv3, because its core is a fork from GPLv3 code.
@@ -55,14 +66,6 @@ Reference
 == Reference
 
 * link:{doc-dir}/[App Docs]
-
-
-== Screenshots 
-
-image::== Reference
-
-* link:{doc-dir}/[App Docs]
-
 
 == Screenshots 
 
