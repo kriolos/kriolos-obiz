@@ -31,10 +31,17 @@ endif::[]
 ifdef::badges[]
 == Build status
 
+image:https://img.shields.io/badge/License-GPLv3-blue.svg["License: GPL v3", link="https://www.gnu.org/licenses/gpl-3.0.en.html"]
 image:https://github.com/kriolos/kriolos-obiz/actions/workflows/build.yml/badge.svg["Build Status", link="https://github.com/kriolos/kriolos-obiz/actions/workflows/build.yml"]
 image:https://codecov.io/github/kriolos/kriolos-obiz/coverage.svg["Code Coverage", link="https://codecov.io/gh/kriolos/kriolos-obiz"]
-image:https://img.shields.io/badge/License-GPLv3-blue.svg["License: GPL v3", link="https://www.gnu.org/licenses/gpl-3.0.en.html"]
-image:https://badges.crowdin.net/kriolos-obiz/localized.svg["Crowdin/Translation Status", link="https://crowdin.com/project/kriolos-obiz"]
+
+
+== Release and Download
+
+image:https://img.shields.io/github/release-date-pre/kriolos/kriolos-obiz.svg["GitHub pre-release", link="https://github.com/kriolos/kriolos-obiz/releases"]
+image:https://img.shields.io/github/release/kriolos/kriolos-obiz.svg["GitHub release", link="https://github.com/kriolos/kriolos-obiz/releases"]
+image:https://img.shields.io/github/downloads/kriolos/kriolos-obiz/total["GitHub all releases", link="https://github.com/kriolos/kriolos-obiz/releases"]
+
 endif::[]
 
 
