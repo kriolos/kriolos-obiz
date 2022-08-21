@@ -1,0 +1,69 @@
+// Global settings
+:ascii-ids:
+:encoding: UTF-8
+:lang: pt_PT
+:icons: font
+:toc:
+:toc-placement!:
+:toclevels: 3
+:numbered:
+:stem:
+
+ifdef::env-github[]
+:imagesdir: https://raw.githubusercontent.com/kriolos/kriolos-obiz/master/docs/images/
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+:badges:
+:doc-dir: https://github.com/kriolos/kriolos-obiz/master/docs
+endif::[]
+
+[[doc]]
+= kriolOS POS - Kriol Open Source Point Of Sales
+:author: Copyright (c) 2020-2022 KriolOS.
+:revnumber: kriolos-obiz-0.0.1-snapshot
+:revdate: {last-update-label} {docdatetime}
+:version-label!:
+
+
+ifdef::badges[]
+== Build status
+
+image:https://github.com/kriolos/kriolos-obiz/actions/workflows/build.yml/badge.svg["Build Status", link="https://github.com/kriolos/kriolos-obiz/actions/workflows/build.yml"]
+image:https://codecov.io/github/kriolos/kriolos-obiz/coverage.svg["Code Coverage", link="https://codecov.io/gh/kriolos/kriolos-obiz"]
+image:https://img.shields.io/badge/License-GPLv3-blue.svg["License: GPL v3", link="https://www.gnu.org/licenses/gpl-3.0.en.html"]
+image:https://badges.crowdin.net/kriolos-obiz/localized.svg["Crowdin/Translation Status", link="https://crowdin.com/project/kriolos-obiz"]
+endif::[]
+
+
+== License 
+
+IMPORTANT: This software is GLPv3, because its core is a fork from GPLv3 code.
+
+[citations]
+----
+Apache 2 software can therefore be included in GPLv3 projects, because the GPLv3 license accepts our software into GPLv3 works. However, GPLv3 software cannot be included in Apache projects. The licenses are incompatible in one direction only, and it is a result of ASF's licensing philosophy and the GPLv3 authors' interpretation of copyright law.
+----
+
+Reference
+
+* https://www.apache.org/licenses/GPL-compatibility.html
+
+
+== Reference
+
+* link:{doc-dir}/[App Docs]
+
+
+== Screenshots 
+
+image::== Reference
+
+* link:{doc-dir}/[App Docs]
+
+
+== Screenshots 
+
+image::kriolos-obiz-screenshot.gif[]

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+      
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.kriolos.obiz</groupId>
+    <artifactId>kriolos-obiz-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Kriolos.OBiz.Parent</name>
+    <url>https://github.com/kriolos/kriolos-opos</url>
+
+    <properties>      
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <netbeans.version>RELEASE130</netbeans.version>
+        <brandingToken>kriolos_obiz</brandingToken>
+    </properties>
+    
+    <modules>
+        <module>kriolos-obiz-suite</module>
+        <module>kriolos-obiz-libs</module>
+        <module>kriolos-obiz-report</module>
+        <module>kriolos-obiz-reportfx</module>
+        <module>kriolos-obiz-webapi</module>
+        
+        <module>branding</module>
+        <module>application</module>
+    </modules>
+    
+    <inceptionYear>2022</inceptionYear>
+    
+    <organization>
+        <name>KriolOS</name>
+        <url>https://kriolos.github.io</url>
+    </organization>
+      
+    <distributionManagement>
+        <site>
+            <id>kriolos.github.io/kriolos-opos/updatesite</id>
+        </site>
+    </distributionManagement>
+      
+    
+    <scm>
+        <connection>scm:git:https://github.com/kriolos/kriolos-opos.git</connection>
+        <developerConnection>scm:git:https://github.com/kriolos/kriolos-opos.git</developerConnection>
+    </scm>
+      
+    
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/kriolos/kriolos-opos/issues</url>
+    </issueManagement>
+      
+    
+    <ciManagement>
+        <system>Github</system>
+        <url>https://github.com/kriolos/kriolos-opos/actions</url>
+    </ciManagement>
+      
+    
+    <licenses>
+        <license>
+            <name>GNU General Public License, version 3</name>
+            <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+            <distribution>manual</distribution>
+        </license>
+    </licenses>
+      
+    
+    <developers>
+        <developer> 
+            <id>poolborges</id>
+            <name>Paulo Borges</name>
+            <organization>KriolOS</organization>
+            <organizationUrl>https://kriolos.github.io</organizationUrl>
+        </developer>
+    </developers>
+      
+    <build>
+        <pluginManagement>
+            <plugins>   
+                <plugin>   
+                    <groupId>org.apache.netbeans.utilities</groupId>
+                    <artifactId>nbm-maven-plugin</artifactId>
+                    <version>4.7</version>
+                    <extensions>true</extensions>
+                    <configuration>   
+                        <brandingToken>${brandingToken}</brandingToken>
+                        <cluster>${brandingToken}</cluster>
+                        <licenseName>GNU General Public License, version 3</licenseName>
+                        <licenseFile>LICENSE</licenseFile>
+                        <author>KriolOS</author>
+                        <homepageUrl>https://kriolos.github.io/kriolos-obiz/</homepageUrl>
+                    </configuration>
+                </plugin>
+                        
+                <plugin>  
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.10.1</version>
+                </plugin>
+                    
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.2.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        
+    </build>
+  
+</project>

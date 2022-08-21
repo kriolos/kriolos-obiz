@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.kriolos.obiz</groupId>
+        <artifactId>kriolos-obiz-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <artifactId>kriolos-obiz-libs</artifactId>
+    <packaging>pom</packaging>
+    <name>Kriolos.OBiz.Libs</name>
+
+    <properties>      
+        <brandingToken>kriolos_obiz_libs</brandingToken>
+        <libVersion>1</libVersion>
+        <codeNameBase>io-github-kriolos-obiz/${libVersion}</codeNameBase>
+    </properties>
+
+    <modules>
+        <module>kriolos-obiz-libs-je</module>
+        <!--
+        <module>kriolos-obiz-libs-krpos</module>
+        -->
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.sleepycat</groupId>
+                <artifactId>je</artifactId>
+                <version>18.3.12</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    
+    <build>
+        <pluginManagement>
+            <plugins>
+            <plugin>
+                <groupId>org.apache.netbeans.utilities</groupId>
+                <artifactId>nbm-maven-plugin</artifactId>
+                <configuration>
+                    <codeNameBase>${codeNameBase}</codeNameBase>
+                </configuration>
+            </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Layer: io/github/kriolos/obiz/branding/layer.xml
+OpenIDE-Module-Localizing-Bundle: io/github/kriolos/obiz/branding/Bundle.properties
+AutoUpdate-Essential-Module: true

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-spring-boot:run -q</actionName>
+            <displayName>spring-boot:run -q</displayName>
+            <goals>
+                <goal>spring-boot:run</goal>
+                <goal>-q</goal>
+            </goals>
+        </action>
+    </actions>
