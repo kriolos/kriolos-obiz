@@ -19,6 +19,9 @@ package io.github.kriolos.opos.basereport;
 import java.awt.BorderLayout;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Platform;
@@ -27,11 +30,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javax.swing.Action;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.actions.SystemAction;
 
 /**
  * Top component which displays something.
@@ -47,7 +52,7 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "io.github.kriolos.opos.basereport.ReportFXTopComponent")
-@ActionReference(path = "Menu/Window" , position = 300)
+@ActionReference(path = "Menu/Window", position = 300)
 @TopComponent.OpenActionRegistration(
         displayName = "#CTL_ReportFXAction",
         preferredID = "ReportFXTopComponent"
@@ -58,10 +63,10 @@ import org.openide.util.NbBundle.Messages;
     "HINT_ReportFXTopComponent=This is a ReportFX window"
 })
 public final class ReportFXTopComponent extends TopComponent {
-    
+
     private static final Logger LOGGER = Logger.getLogger(ReportFXTopComponent.class.getName());
     private JFXPanel fxPanel;
-    private App app;
+    private PrimaryController controller;
 
     public ReportFXTopComponent() {
         initComponents();
@@ -71,18 +76,41 @@ public final class ReportFXTopComponent extends TopComponent {
         init();
     }
     
+    @Override
+    public Action[] getActions() {
+        Action[] deflt = super.getActions();
+        Action[] added = new Action[] {
+            //SystemAction.getAction(WidgetReparseAction.class),
+        };
+        
+        List<Action> acs = new ArrayList<>(Arrays.asList(deflt));
+            acs.addAll(Arrays.asList(added));
+        
+        return (Action[])acs.toArray();
+    }
+
     private void init() {
         fxPanel = new JFXPanel();
-        app = new App();
         add(fxPanel, BorderLayout.CENTER);
         Platform.setImplicitExit(false);
         Platform.runLater(this::createScene);
     }
-    
+
     private void createScene() {
         try {
-            app.start();
-            fxPanel.setScene(app.getScene());
+
+            URL location = getClass().getResource(App.PR);
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(location);
+            fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
+
+            Parent root = (Parent) fxmlLoader.load(location.openStream());
+            Scene scene = new Scene(root);
+            fxPanel.setScene(scene);
+            
+            App.setScene(scene);
+            controller = (PrimaryController) fxmlLoader.getController();
+            //controller.setPhoto(photo);
         } catch (IOException ex) {
             LOGGER.log(Level.SEVERE, null, ex);
         }

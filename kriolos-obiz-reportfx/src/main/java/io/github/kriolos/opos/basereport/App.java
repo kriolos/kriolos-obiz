@@ -44,21 +44,11 @@ public class App extends Application {
         stage.show();
     }
 
-    public void start() throws IOException {
-        URL location = getClass().getResource(PR);
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(location);
-        fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
-
-        Parent root = (Parent) fxmlLoader.load(location.openStream());
-        scene = new Scene(root);
+    public static void setScene(Scene _scene) throws IOException {
+        scene = _scene;
     }
-
-    public Scene getScene() {
-        return scene;
-    }
-
-    static void setRoot(String fxml) throws IOException {
+    
+    public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 

@@ -15,10 +15,10 @@
         </goals>
     </action>
     <action>
-        <actionName>CUSTOM-package</actionName>
-        <displayName>package</displayName>
+        <actionName>CUSTOM-gluonfx:package</actionName>
+        <displayName>gluonfx:package</displayName>
         <goals>
-            <goal>package</goal>
+            <goal>gluonfx:package</goal>
         </goals>
     </action>
     
@@ -27,28 +27,6 @@
         <displayName>javafx:run</displayName>
         <goals>
             <goal>javafx:run</goal>
-        </goals>
-    </action>
-    <action>
-        <actionName>CUSTOM-mvn -N io.takari:maven:wrapper</actionName>
-        <displayName>mvn -N io.takari:maven:wrapper</displayName>
-        <goals>
-            <goal>-N</goal>
-            <goal>io.takari:maven:wrapper</goal>
-        </goals>
-    </action>
-    <action>
-        <actionName>CUSTOM-gluonfx:run</actionName>
-        <displayName>gluonfx:run</displayName>
-        <goals>
-            <goal>gluonfx:run</goal>
-        </goals>
-    </action>
-    <action>
-        <actionName>CUSTOM-gluonfx:build</actionName>
-        <displayName>gluonfx:build</displayName>
-        <goals>
-            <goal>gluonfx:build</goal>
         </goals>
     </action>
 </actions>
