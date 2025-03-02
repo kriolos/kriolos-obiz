@@ -27,7 +27,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact
       with:
         name: kriolos-obiz-app
         path: "application/target/kriolos-obiz-app-0.0.1-SNAPSHOT.zip"
