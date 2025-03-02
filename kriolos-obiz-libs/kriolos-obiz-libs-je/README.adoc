@@ -1,0 +1,7 @@
+= Libs :: JE
+
+
+.How to build
+----
+nbm:manifest
+----

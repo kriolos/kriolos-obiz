@@ -11,9 +11,9 @@
 
     <properties>      
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <netbeans.version>RELEASE140</netbeans.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <netbeans.version>RELEASE240</netbeans.version>
         <brandingToken>kriolos_obiz</brandingToken>
     </properties>
     
@@ -21,9 +21,7 @@
         <module>unicenta-pos</module>
         <module>kriolos-obiz-suite</module>
         <module>kriolos-obiz-libs</module>
-        <module>kriolos-obiz-report</module>
-        <module>kriolos-obiz-reportfx</module>
-        <module>kriolos-obiz-webapi</module>
+        <module>kriolos-opos-nbm</module>
         
         <module>branding</module>
         <module>application</module>
@@ -85,7 +83,7 @@
                 <plugin>   
                     <groupId>org.apache.netbeans.utilities</groupId>
                     <artifactId>nbm-maven-plugin</artifactId>
-                    <version>4.8</version>
+                    <version>14.2</version>
                     <extensions>true</extensions>
                     <configuration>   
                         <brandingToken>${brandingToken}</brandingToken>
@@ -93,20 +91,20 @@
                         <licenseName>GNU General Public License, version 3</licenseName>
                         <licenseFile>LICENSE</licenseFile>
                         <author>KriolOS</author>
-                        <homepageUrl>https://kriolos.github.io/kriolos-obiz/</homepageUrl>
+                        <homePageUrl>https://kriolos.github.io/kriolos-obiz/</homePageUrl>
                     </configuration>
                 </plugin>
                         
                 <plugin>  
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.10.1</version>
+                    <version>3.13.0</version>
                 </plugin>
                     
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.3.0</version>
+                    <version>3.4.1</version>
                 </plugin>
             </plugins>
         </pluginManagement>

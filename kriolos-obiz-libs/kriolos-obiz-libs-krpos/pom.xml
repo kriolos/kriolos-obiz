@@ -6,7 +6,7 @@
         <groupId>io.github.kriolos.obiz</groupId>
         <artifactId>kriolos-obiz-libs</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../</relativePath>
+        <relativePath/>
     </parent>
 
     <artifactId>kriolos-obiz-libs-krpos</artifactId>
@@ -128,12 +128,5 @@
             </plugin>
         </plugins>
     </build>
-    
-    <repositories>
-        <!-- Because Jasper use own "itext" of com.lowagie:itext:2.1.7.js9 -->
-        <repository>
-            <id>jaspersoft-third-party</id>
-            <url>https://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/</url>
-        </repository>
-    </repositories>
+
 </project>

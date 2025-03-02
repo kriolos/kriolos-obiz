@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-OpenIDE-Module-Localizing-Bundle: io/github/kriolos/opos/basereport/Bundle.properties
-OpenIDE-Module-Requires: org.openide.windows.WindowManager
-
