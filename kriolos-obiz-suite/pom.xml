@@ -5,7 +5,7 @@
         <groupId>io.github.kriolos.obiz</groupId>
         <artifactId>kriolos-obiz-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>kriolos-obiz-suite</artifactId>
