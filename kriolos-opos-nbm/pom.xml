@@ -99,6 +99,11 @@
             <version>${netbeans.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.netbeans.modules</groupId>
+            <artifactId>org-netbeans-modules-swing-validation</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
+        <dependency>
             <groupId>io.github.kriolos.opos</groupId>
             <artifactId>kriolos-opos-app</artifactId>
             <version>${kriolos.opos.version}</version>

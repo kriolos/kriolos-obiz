@@ -16,10 +16,10 @@
     
     
     <description>
-        Kriol Open Business (krOBiz) Platform. 
-        krOBiz Platform is currently undergoing Incubation at Kriol Open Source Software (KriolOSS) Initiative. 
+        Kriol Open Business (OBiz) Platform.
+        kriolOS-OBiz Platform is currently undergoing Incubation at Kriol Open Source Software (KriolOSS) Initiative.
         Is based on Apache NetBeans Platform from the Apache Software Foundation
-        Is licensed under NU General Public License, version 3.
+        Is licensed under GNU General Public License, version 3.
         For more information, please visit https://github.com/kriolos/kriolos-obiz.
     </description>
 
@@ -28,8 +28,10 @@
         <all.clusters>${project.build.directory}/${brandingToken}</all.clusters>
         <jpms-flags>
             -Djava.security.manager=allow
+            -Djdk.net.URLClassPath.disableClassPathURLCheck=true
             --add-opens=java.base/java.net=ALL-UNNAMED
-            <!-- add more "add opens" if needed -->
+            <!-- add more "add opens" if needed
+            -->
         </jpms-flags>
     </properties>
 
@@ -102,9 +104,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.2</version>
                 <configuration>
-
+                    <argLine>
+                        ${jpms-flags}
+                    </argLine>
                     <systemPropertyVariables>
-                        <argLine>${jpms-flags}</argLine>
                         <all.clusters>${all.clusters}</all.clusters>
                         <branding.token>${brandingToken}</branding.token>
                     </systemPropertyVariables>
